@@ -1,0 +1,37 @@
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "password": "securepass",
+    "active_listings": 3,
+    "brokerage": "ABC Realty"
+  },
+  {
+    "name": "Jane Smith",
+    "email": "jane.smith@example.com",
+    "password": "pass1234",
+    "active_listings": 5,
+    "brokerage": "XYZ Properties"
+  },
+  {
+    "name": "Mike Johnson",
+    "email": "mike.johnson@example.com",
+    "password": "a1b2c3",
+    "active_listings": 1,
+    "brokerage": "123 Realty Group"
+  },
+  {
+    "name": "Emily Davis",
+    "email": "emily.davis@example.com",
+    "password": "davis2022",
+    "active_listings": 9,
+    "brokerage": "Main Street Realtors"
+  },
+  {
+    "name": "Alex Turner",
+    "email": "alex.turner@example.com",
+    "password": "agentpass",
+    "active_listings": 7,
+    "brokerage": "Cityscape Properties"
+  }
+]

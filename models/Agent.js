@@ -20,7 +20,7 @@ Agent.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isUnique: true,
+        unique: true,
         len: [15],
       }
     },
