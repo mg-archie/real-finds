@@ -29,6 +29,10 @@ Listing.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    city: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     listing_type: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -41,20 +45,13 @@ Listing.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    location_id: {
+    agent_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'location',
-        key: 'id',
-      },
-    },
-    agent_id: {
-      type: DataType.INTEGER,
-      references: {
-        model: 'location',
+        model: 'agent',
         key: 'id',
       }
-    }
+    },
   },
   {
     sequelize,
