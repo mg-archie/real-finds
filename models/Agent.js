@@ -21,7 +21,8 @@ Agent.init(
       allowNull: false,
       validate: {
         unique: true,
-        len: [0, 420],
+        len: [2, 25],
+        notEmpty: true,
       }
     },
     email: {

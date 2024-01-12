@@ -7,8 +7,7 @@
     "city": "Toronto",
     "listing_type": "House",
     "rooms": 4,
-    "baths": 2,
-    "agent_id": 1
+    "baths": 2
   },
   {
     "price": 700000,
@@ -18,8 +17,7 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 2,
-    "baths": 1,
-    "agent_id": 2
+    "baths": 1
   },
   {
     "price": 800000,
@@ -29,8 +27,7 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 3,
-    "baths": 2,
-    "agent_id": 3
+    "baths": 2
   },
   {
     "price": 600000,
@@ -40,8 +37,7 @@
     "city": "Toronto",
     "listing_type": "House",
     "rooms": 5,
-    "baths": 3,
-    "agent_id": 4
+    "baths": 3
   },
   {
     "price": 900000,
@@ -51,7 +47,6 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 3,
-    "baths": 2,
-    "agent_id": 5
+    "baths": 2
   }
 ]

@@ -20,7 +20,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [0, 420],
+        len: [2, 25],
+        unique: true,
+        notEmpty: true,
+
       }
     },
     email: {
