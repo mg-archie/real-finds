@@ -20,8 +20,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isUnique: true,
-        len: [15],
+        len: [0, 420],
       }
     },
     email: {
@@ -36,10 +35,11 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
-      },
+        len: [0, 420],
+      }
+  
     },
-    favourites: {
+    favourite: {
       type: DataTypes.INTEGER,
       references: {
         model: 'listing',
