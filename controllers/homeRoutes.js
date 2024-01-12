@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Agent, Listing, Location } = require('../models');
+const { User, Agent, Listing, } = require('../models');
 
 // home route
 router.get('/', async (req, res) => {
@@ -60,7 +60,7 @@ router.get('/agent/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 // userts will be routed to profiles where it shows their infor and can edit their info
 // agents on the otherhand shoudl be shown to thier profile and display the same edit stuff but shoudl be able to see thier ective listings 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/profile', async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
