@@ -44,11 +44,9 @@ User.init(
     },
     favourite: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'listing',
-        key: 'id',
-      },
-    },
+      allowNull: false,
+      defaultValue: 0,
+    }
   },
   {
     hooks: {

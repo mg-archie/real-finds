@@ -42,10 +42,8 @@ Agent.init(
     },
     active_listings: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'listing',
-        key: 'id',
-      },
+      allowNull: false,
+      defaultValue: 0,
     },
     brokerage: {
       type: DataTypes.STRING,
