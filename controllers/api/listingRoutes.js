@@ -39,19 +39,28 @@ router.get('/:id', async (req, res) => {
 
 // create a new listing
 router.post('/', withAuth, async (req, res) => {
-    try {
-        const newListing = await Listing.create({
-            ...req.body,
-            agent_id: req.session.user_id,
-        });
 
+    const listing = new Listing({
+        price: req.body.price,
+        date_created: new Date(req.body.date_created),
+        address: req.body.address,
+        postal_code: req.body.postal_code,
+        city: req.body.city,
+        listing_type: req.body.listing_type,
+        rooms: req.body.rooms,
+        baths: req.body.baths,
+    })
+
+    try {
+        const newListing = await listing.save()
         res.status(200).json(newListing);
+        res.redirect('/home')
+
     } catch (err) {
         res.status(400).json(err);
     }
 });
 
-// look
 // update a current listing
 router.put('/:id', async (req, res) => {
     try {

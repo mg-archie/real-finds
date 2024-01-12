@@ -3,6 +3,8 @@ const sequelize = require('../config/connection');
 
 class Listing extends Model {}
 
+// note for Myles, add sqft 
+
 Listing.init(
   {
     id: {
