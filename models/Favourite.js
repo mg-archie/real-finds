@@ -12,18 +12,20 @@ Favourites.init(
       autoIncrement: true
     },
     user_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: 'user',
-        id: 'id',
-      }
+        key: 'id',
+      },
     },
     listing_id: {
+      type: DataTypes.INTEGER,
       references: {
         model: 'listing',
-        id: 'id',
+        key: 'id',
       }
-    }
-  },
+    },
+  },  
   {
     sequelize,
     timestamps: false,
