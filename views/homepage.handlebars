@@ -13,9 +13,6 @@
 
 <h2>Featured</h2>
 <p>Browse through some of the hottest listings in the GTA.</p>
-<p>ok below i will need to make a partial that renders the most clicked listings, we need to add a clicks value in the
-  listing model and pre populate it. but when a user clicks on the listing it shoudl +1 the amount. in this featured
-  partial i will sort it ascending (highest first) and show only 10 listings</p>
 
 {{#each listings}}
 {{> featured_listing listing=this}}
@@ -24,48 +21,37 @@
 <h2>Favourites / recently viewed</h2>
 <p>Continue where you left off..</p>
 <p>same as above but will be the users favourites list or recently viewed, will depend on what we decide to use </p>
-<ul>
-  {{#each listings}}
-  <li>
-    <h3>{{this.address}}</h3>
-    <p>Price: ${{this.price}}</p>
-    <p>Listing Type: {{this.listing_type}}</p>
-    <p>Rooms: {{this.rooms}}</p>
-    <p>Baths: {{this.baths}}</p>
-    <p>city: {{this.city}}</p>
-    <p>postal_code: {{this.postal_code}}</p>
-    <p>address: {{this.address}}</p>
-    <p>Agent: {{this.agent.name}}</p>
-    <a href="/listing/{{this.id}}">View Listing</a>
-  </li>
-  {{/each}}
-</ul>
 
 <h2>How it Works</h2>
 
-<div>
-  <div>
-    <img src="./images/real-estate.png" alt="">
-    <h3>1. Sign up</h3>
-    <p>Sign up for our platform, it's totally free! Create your account and unlock a world of real estate opportunities.
-    </p>
-  </div>
+<div class="container mx-auto py-10">
+  <h2 class="text-3xl font-semibold mb-6">How it Works</h2>
 
-  <div>
-    <img src="./images/search.png" alt="">
-    <h3>2. View Listings</h3>
-    <p>Explore a diverse range of property listings posted by licensed and verified agents. We ensure that our listings
-      meet the highest standards to provide you with a reliable and secure browsing experience.</p>
-  </div>
+  <div class="flex justify-between space-x-6">
+    <div class="flex-1">
+      <img src="./images/real-estate.png" alt="">
+      <h3 class="text-xl font-semibold mt-4">1. Sign up</h3>
+      <p class="mt-2">Sign up for our platform, it's totally free! Create your account and unlock a world of real estate
+        opportunities.</p>
+    </div>
 
-  <div>
-    <img src="./images/deal.png" alt="">
-    <h3>3. Get in Touch</h3>
-    <p>RealFinds simplifies the process of connecting with real estate agents. If you come across a listing that
-      captures your interest, easily get in touch with the responsible agent. Their contact information is readily
-      available, allowing you to initiate conversations and gather more details about the property.</p>
+    <div class="flex-1">
+      <img src="./images/search.png" alt="">
+      <h3 class="text-xl font-semibold mt-4">2. View Listings</h3>
+      <p class="mt-2">Explore a diverse range of property listings posted by licensed and verified agents. We ensure
+        that our listings meet the highest standards to provide you with a reliable and secure browsing experience.</p>
+    </div>
+
+    <div class="flex-1">
+      <img src="./images/deal.png" alt="">
+      <h3 class="text-xl font-semibold mt-4">3. Get in Touch</h3>
+      <p class="mt-2">RealFinds simplifies the process of connecting with real estate agents. If you come across a
+        listing that captures your interest, easily get in touch with the responsible agent. Their contact information
+        is readily available, allowing you to initiate conversations and gather more details about the property.</p>
+    </div>
   </div>
 </div>
+
 
 <h2>Agents</h2>
 <p>in here will need to be a partial as well for random agents, can use a math random to sort it maybe, display 10</p>
