@@ -40,7 +40,6 @@ User.init(
       validate: {
         len: [0, 420],
       }
-  
     },
     // favourite: {
     //   type: DataTypes.INTEGER,
