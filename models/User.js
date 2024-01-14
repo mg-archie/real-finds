@@ -41,18 +41,16 @@ User.init(
         len: [0, 420],
       }
     },
-    favourite: {
-      type: DataTypes.INTEGER,
+    // favourite: {
+    //   type: DataTypes.INTEGER,
 
-      allowNull: true,
-      defaultValue: 0;
-      references: {
-        model: 'listing',
-        key: 'id'
-      },
-
-      defaultValue: 0,
-    }
+    //   allowNull: true,
+    //   defaultValue: 0,
+    //   references: {
+    //     model: 'listing',
+    //     key: 'id'
+    //   },
+    // }
   },
   {
     hooks: {
