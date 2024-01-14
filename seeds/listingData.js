@@ -1,4 +1,5 @@
-[
+const { Listing } = require('../models/index.js')
+const listingData = [
   {
     "price": 500000,
     "date_created": "2023-01-01",
@@ -7,7 +8,7 @@
     "city": "Toronto",
     "listing_type": "House",
     "rooms": 4,
-    "baths": 2
+    "baths": 2,
   },
   {
     "price": 700000,
@@ -17,7 +18,7 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 2,
-    "baths": 1
+    "baths": 1,
   },
   {
     "price": 800000,
@@ -27,7 +28,7 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 3,
-    "baths": 2
+    "baths": 2,
   },
   {
     "price": 600000,
@@ -37,7 +38,7 @@
     "city": "Toronto",
     "listing_type": "House",
     "rooms": 5,
-    "baths": 3
+    "baths": 3,
   },
   {
     "price": 900000,
@@ -47,6 +48,9 @@
     "city": "Toronto",
     "listing_type": "Condo",
     "rooms": 3,
-    "baths": 2
+    "baths": 2,
   }
 ]
+const seedListing = () => Listing.bulkCreate(listingData);
+module.exports = seedListing;
+
