@@ -39,6 +39,10 @@ Listing.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    sqft: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     rooms: {
       type: DataTypes.INTEGER,
       allowNull: false,
