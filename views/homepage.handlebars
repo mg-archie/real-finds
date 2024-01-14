@@ -13,13 +13,9 @@
 <h2>Featured</h2>
 <p>Browse through some of the hottest listings in the GTA.</p>
 
-{{> featured_listing}}
+{{> featured_listings}}
 
-<h2>Favourites / recently viewed</h2>
-<p>Continue where you left off..</p>
-<p>same as above but will be the users favourites list or recently viewed, will depend on what we decide to use </p>
-
-<h2>How it Works</h2>
+{{!-- <h2>How it Works</h2>
 
 <div class="container mx-auto py-10">
   <h2 class="text-3xl font-semibold mb-6">How it Works</h2>
@@ -47,18 +43,10 @@
         is readily available, allowing you to initiate conversations and gather more details about the property.</p>
     </div>
   </div>
-</div>
+</div> --}}
 
 
-<h2>Agents</h2>
-<p>in here will need to be a partial as well for random agents, can use a math random to sort it maybe, display 10</p>
-<ul>
-  {{#each agents}}
-  <li>
-    <h3>{{this.name}}</h3>
-    <p>Email: {{this.email}}</p>
-    <p>Phone: {{this.phone}}</p>
-    <a href="/agent/{{this.id}}">View Agent</a>
-  </li>
-  {{/each}}
-</ul>
+<h3>A Diverse Pool of Real Estate Talent</h3>
+<p>Our platform connects local agents within the Greater Toronto Area and neighboring regions. Explore a community of regional real estate professionals promoting listings and assisting clients. Join us to enhance your regional real estate journey./p>
+
+{{> featured_agents}}
