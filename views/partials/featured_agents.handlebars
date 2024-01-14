@@ -1,0 +1,29 @@
+<div class="flex gap-4">
+    {{#each agents}}
+        <div
+            class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+
+            <div class="flex flex-col items-center p-8">
+                {{!-- icon --}}
+                <div class="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                    <svg class="absolute w-12 h-12 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </div>
+                {{!-- info text --}}
+                <h5 class="mb-1 mt-4 text-xl font-medium text-gray-900 dark:text-white">{{this.name}}</h5>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{{this.email}}</span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">{{this.brokerage}}</span>
+                {{!-- button have to filter by agent id to show active listings --}}
+                <div class="flex mt-4 md:mt-6">
+                    <a href="#"
+                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">View
+                        Listings</a>
+
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
