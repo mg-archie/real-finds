@@ -1,13 +1,13 @@
-<section class="bg-gray-200 h-screen flex items-center justify-center">
+<section id="login-section" class="bg-gray-200 h-screen flex items-center justify-center">
 
   <div class="bg-white p-8 rounded shadow-md flex">
     <!-- Login Section -->
     <div class="w-1/2 pr-4">
       <h2 class="text-2xl font-semibold mb-4">Login</h2>
-      <form action="/login" method="post">
+      <form class="login-form">
         <div class="mb-4">
-          <label for="loginUsername" class="block text-gray-600">Username/Email:</label>
-          <input type="text" id="loginUsername" name="loginUsername" class="border rounded px-3 py-2 w-full">
+          <label for="loginEmail" class="block text-gray-600">Email:</label>
+          <input type="text" id="loginEmail" name="loginEmail" class="border rounded px-3 py-2 w-full">
         </div>
         <div class="mb-4">
           <label for="loginPassword" class="block text-gray-600">Password:</label>
@@ -20,7 +20,7 @@
     <!-- Create Account Section -->
     <div class="w-1/2 pl-4">
       <h2 class="text-2xl font-semibold mb-4">Create an Account</h2>
-      <form action="/create-account" method="post">
+      <form class="signup-form"> <!--action="/api/users" method="post"-->
         <div class="mb-4">
           <label for="createUsername" class="block text-gray-600">Username:</label>
           <input type="text" id="createUsername" name="createUsername" class="border rounded px-3 py-2 w-full">
@@ -40,4 +40,5 @@
 
 </section>
 
-<script src="../public/js/login.js"></script>
+<script src="/js/create.js"></script>
+<script src="/js/login.js"></script>

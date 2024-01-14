@@ -4,7 +4,7 @@ const userRoutes = require('./userRoutes');
 const agentRoutes = require('./agentRoutes');
 
 router.use('/listing', listingRoutes);
-router.use('/user', userRoutes);
+router.use('/users', userRoutes);
 router.use('/agent', agentRoutes);
 
 module.exports = router;
