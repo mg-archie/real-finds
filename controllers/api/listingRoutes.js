@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
             include: [
                 {
                     model: Agent,
-                    attributes: ['name'],
+                    // attributes: ['name'],
                 },
             ]
         });
