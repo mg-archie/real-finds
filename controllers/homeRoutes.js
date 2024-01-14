@@ -4,15 +4,18 @@ const { User, Agent, Listing, } = require('../models');
 // home route
 router.get('/', async (req, res) => {
   try {
-    // Fetch listings and agents data from the database
-    const listingData = await Listing.findAll();
+    // Fetch latest 3 listings and agents data from the database
+    const listingData = await Listing.findAll({
+      limit: 3, // Limit to 3 listings
+      order: [['date_created', 'DESC']], // Sort by date_created in descending order
+    });
     const agentData = await Agent.findAll();
 
     // Serialize data so the template can read it
     const listings = listingData.map((listing) => listing.get({ plain: true }));
     const agents = agentData.map((agent) => agent.get({ plain: true }));
 
-    // Render the home page with the fetched data and a session flag indicating user is logged in
+    // Render the home page with the fetched data and a session flag indicating the user is logged in
     res.render('homepage', { listings, agents, logged_in: req.session.logged_in });
   } catch (err) {
     console.error(err);
@@ -28,7 +31,7 @@ router.get('/listing/:id', async (req, res) => {
       include: [
         {
           model: Agent,
-          attributes: ['name'],
+          attributes: ['name', 'brokerage'],
         },
       ]
     });

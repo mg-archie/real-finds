@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Agent, Listing, Location } = require('../models');
+const { User, Agent, Listing, } = require('../models');
 
 // Search route
 router.get('/', async (req, res) => {
