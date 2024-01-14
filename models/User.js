@@ -19,9 +19,9 @@ User.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       validate: {
         len: [2, 25],
-        unique: true,
         notEmpty: true,
 
       }
@@ -44,7 +44,7 @@ User.init(
     },
     favourite: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       defaultValue: 0,
     }
   },
