@@ -42,11 +42,11 @@ User.init(
       }
   
     },
-    favourite: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      defaultValue: 0,
-    }
+    // favourite: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: true,
+    //   defaultValue: 0,
+    // }
   },
   {
     hooks: {
