@@ -3,8 +3,6 @@ const sequelize = require('../config/connection');
 
 class Listing extends Model {}
 
-// note for Myles, add sqft 
-
 Listing.init(
   {
     id: {
@@ -16,7 +14,6 @@ Listing.init(
     price: {
       type: DataTypes.DECIMAL,
       allowNull: false,
-      // can do a range for decimal, probably not necessary 
     },
     date_created: {
       type: DataTypes.DATE,
@@ -39,6 +36,11 @@ Listing.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
+    sqft: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0,
+    },
     rooms: {
       type: DataTypes.INTEGER,
       allowNull: false,
@@ -46,13 +48,6 @@ Listing.init(
     baths: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    },
-    agent_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'agent',
-        key: 'id',
-      }
     },
   },
   {

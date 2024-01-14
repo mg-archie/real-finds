@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const Listing = require('./Listing');
 
 class Agent extends Model {
   checkPassword(loginPw) {
@@ -42,7 +43,10 @@ Agent.init(
     },
     active_listings: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      references: {
+        model: 'listing',
+        key: 'id'
+      },
       defaultValue: 0,
     },
     brokerage: {

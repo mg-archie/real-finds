@@ -40,10 +40,13 @@ User.init(
       validate: {
         len: [0, 420],
       }
-  
     },
     favourite: {
       type: DataTypes.INTEGER,
+      references: {
+        model: 'listing',
+        key: 'id'
+      },
       allowNull: false,
       defaultValue: 0,
     }
