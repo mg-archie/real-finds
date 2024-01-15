@@ -38,8 +38,8 @@ router.get('/listing/:id', async (req, res) => {
     });
 
     const listing = listingData.get({ plain: true });
-
-    res.render('listing', { listing });
+    console.log('======================================',listing);
+    res.render('listing', listing);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
