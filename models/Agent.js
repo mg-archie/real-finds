@@ -20,8 +20,8 @@ Agent.init(
     name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
       validate: {
-        unique: true,
         len: [2, 25],
         notEmpty: true,
       }
@@ -41,17 +41,17 @@ Agent.init(
         len: [0, 420],
       },
     },
-    active_listings: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'listing',
-        key: 'id'
-      },
-      defaultValue: 0,
-    },
+    // active_listings: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: 'listing',
+    //     key: 'id'
+    //   },
+    //   defaultValue: 0,
+    // },
     brokerage: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     }
   },
   {
