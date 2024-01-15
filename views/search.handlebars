@@ -1,8 +1,25 @@
 {{> searchbar}}
 <!-- Display the search results here -->
-<h1>Search Results</h1>
-<ul>
+<h1>Showing results for:</h1>
+<p></p>
+{{!-- <ul>
   {{#each searchResults}}
     <li>{{this.title}}</li> <!-- Adjust this to display the relevant data -->
   {{/each}}
-</ul>
+</ul> --}}
+
+{{#if searchResults.length}}
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    {{#each searchResults}}
+      <div class="bg-white p-4 rounded-lg shadow-md">
+        <h3 class="text-xl font-semibold">{{this.address}}</h3>
+        <p>City: {{this.city}}</p>
+        <p>Rooms: {{this.rooms}}</p>
+        <p>Baths: {{this.baths}}</p>
+        <p>Price: ${{this.price}}</p>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p class="text-gray-700">No results found.</p>
+{{/if}}

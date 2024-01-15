@@ -1,35 +1,62 @@
 const router = require('express').Router();
-const { User, Agent, Listing } = require('../models');
+const { Listing } = require('../models');
+const { Op } = require('sequelize');
 
-// Search route
 router.get('/', async (req, res) => {
   try {
-    const { query } = req.query;
+    const { query, baths, rooms, type, city } = req.query;
 
-    let searchResults;
-
+    let searchConditions = {};
     if (query) {
-      // If the query is not empty, perform the search logic based on the query parameter
-      searchResults = await performSearch(query);
-    } else {
-      // If the query is empty, retrieve all listings (modify this logic based on your database schema)
-      searchResults = await Listing.findAll();
+      searchConditions.address = { [Op.like]: `%${query.toLowerCase()}%` };
+    }
+    // Add conditions for city, baths, rooms, and type if they are not empty
+    if (city && city !== '') {
+      searchConditions.city = city;
     }
 
-    // Render the search page with the search results
-    res.render('search', { searchResults, });
+    // Handle "1+", "2+", "3+", "4+", and "5+" options for bedrooms
+    if (rooms && rooms !== '') {
+      if (rooms === "5+") {
+        searchConditions.rooms = { [Op.gte]: 5 };
+      } else {
+        const roomCount = parseInt(rooms, 10);
+        searchConditions.rooms = { [Op.gte]: roomCount };
+      }
+    }
+
+    // Handle "1+", "2+", "3+", "4+", and "5+" options for bathrooms
+    if (baths && baths !== '') {
+      if (baths === "5+") {
+        searchConditions.baths = { [Op.gte]: 5 };
+      } else {
+        const bathCount = parseInt(baths, 10);
+        searchConditions.baths = { [Op.gte]: bathCount };
+      }
+    }
+
+    if (type && type !== '') {
+      searchConditions.listing_type = type;
+    }
+
+    let searchResults = await Listing.findAll({
+      where: searchConditions
+    });
+
+    res.render('search', {
+      searchResults,
+      queryParams: {
+        query,
+        baths,
+        rooms,
+        type,
+        city
+      }
+    });
   } catch (err) {
-    console.log(err)
     console.error(err);
     res.status(500).json(err);
   }
 });
-
-// Function to perform the search logic
-async function performSearch(query) {
-  // Perform your search logic here based on the query parameter
-  // For example, you can search for listings or agents that match the query
-  // Return the search results
-}
 
 module.exports = router;

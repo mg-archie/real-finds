@@ -1,68 +1,107 @@
-
 <div class="container mx-auto p-10">
-    <form action="/search" method="get" class="bg-gray-900 text-white rounded-lg p-6 shadow-lg">
-        <div class="flex flex-col md:flex-row md:items-center gap-4">
-            {{!-- inline Search Bar --}}
-            <div class="flex-grow">
-                <label for="search-query" class="sr-only">Search</label>
-                <div class="relative">
-                    <span class="absolute inset-y-0 left-0 flex items-center pl-3">
-                        <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M11 21h2M12 2a7 7 0 00-7 7v3a7 7 0 004.9 6.7M12 2a7 7 0 017 7v3a7 7 0 01-4.9 6.7M12 2v7" />
-                        </svg>
-                    </span>
-                    <input type="search" id="search-query" name="query" placeholder="Enter a city or address..."
-                        required
-                        class="block w-full pl-10 pr-4 py-3 rounded-lg bg-gray-800 border-transparent focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400">
-                </div>
+
+    <form action="/search" method="get" class="bg-gray-900 text-white rounded-lg py-10 p-10 shadow-lg">
+
+        {{!-- Full-Width Search Bar --}}
+        <h1 class=" text-2xl mb-3"> Search for your next home</h1>
+        <p class=" text-base mb-6"> Explore various listings across the GTA.</p>
+
+        <div class="mb-6">
+            <label for="search-query" class="sr-only">Search</label>
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg class="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 21h2M12 2a7 7 0 00-7 7v3a7 7 0 004.9 6.7M12 2a7 7 0 017 7v3a7 7 0 01-4.9 6.7M12 2v7" />
+                    </svg>
+                </span>
+                <input type="search" id="search-query" name="query" placeholder="Enter an address..."
+                    class="block w-full pl-10 pr-4 py-3 rounded-lg bg-gray-800 border-transparent focus:border-blue-500 focus:ring-blue-500 text-white placeholder-gray-400">
+            </div>
+        </div>
+
+
+        {{!-- Select Options in Row --}}
+        <div class="flex flex-wrap gap-4">
+
+            {{!-- Room Select --}}
+            <div class="flex-auto">
+                <p class=" text-base mb-2">Bedrooms</p>
+                <select id="number-of-rooms" name="rooms"
+                    class="w-full py-3 px-5 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
+                    {{!-- Options --}}
+                    <option value="">Any</option>
+                    <option value="1">1 Room</option>
+                    <option value="1+">1+ Room</option>
+                    <option value="2">2 Rooms</option>
+                    <option value="2+">2+ Rooms</option>
+                    <option value="3">3 Rooms</option>
+                    <option value="3+">3+ Rooms</option>
+                    <option value="4">4 Rooms</option>
+                    <option value="4+">4+ Rooms</option>
+                    <option value="5">5 Rooms</option>
+                    <option value="5+">5+ Rooms</option>
+                </select>
             </div>
 
-            {{!-- Filters --}}
-            <select id="number-of-baths" name="baths"
-                class="p-3 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
-                <option value="">Baths</option>
-                <option value="1">1 Bath</option>
-                <option value="2">2 Baths</option>
-                <option value="3">3 Baths</option>
-                <option value="3">3 Baths</option>
-                <option value="3">3 Baths</option>
-                <option value="3">3 Baths</option>
-                <option value="3">3 Baths</option>
-                <option value="3">3 Baths</option>
-            
-            </select>
+            {{!-- Bath Select --}}
+            <div class="flex-auto">
+                <p class=" text-base mb-2">Bathrooms</p>
 
-            <select id="number-of-rooms" name="rooms"
-                class="p-3 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
-                <option value="">Rooms</option>
-                <option value="1">1 Room</option>
-                <option value="2">2 Rooms</option>
-                <option value="3">3 Rooms</option>
-                <option value="3">3 Rooms</option>
-                <option value="3">3 Rooms</option>
-                <option value="3">3 Rooms</option>
-                <option value="3">3 Rooms</option>
-                <option value="3">3 Rooms</option>
+                <select id="number-of-baths" name="baths"
+                    class="w-full py-3 px-5 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
+                    {{!-- Options --}}
+                    <option value="">Any</option>
+                    <option value="1">1 Bath</option>
+                    <option value="1+">1+ Bath</option>
+                    <option value="2">2 Baths</option>
+                    <option value="2+">2+ Baths</option>
+                    <option value="3">3 Baths</option>
+                    <option value="3+">3+ Baths</option>
+                    <option value="4">4 Baths</option>
+                    <option value="4+">4+ Baths</option>
+                    <option value="5">5 Baths</option>
+                    <option value="5+">5+ Baths</option>
+                </select>
+            </div>
 
-            </select>
+            {{!-- Type Select --}}
+            <div class="flex-auto">
+                <p class=" text-base mb-2">Property type</p>
+                <select id="type" name="type"
+                    class="w-full p-3 px-5 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
+                    Options
+                    <option value="">Any</option>
+                    <option value="House">House</option>
+                    <option value="Condo">Condo</option>
+                </select>
+            </div>
 
-            <select id="city" name="city"
-                class="p-3 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
-                <option value="">City</option>
-                <option value="New York">New York</option>
-                <option value="Los Angeles">Los Angeles</option>
-                <option value="Chicago">Chicago</option>
+            {{!-- City Select --}}
+            <div class="flex-auto">
+                <p class=" text-base mb-2">City</p>
+                <select id="city" name="city"
+                    class="w-full py-3 px-5 rounded-lg bg-gray-800 text-white border-transparent focus:border-blue-500 focus:ring-blue-500">
+                    {{!-- Option --}}
+                    <option value="">Any</option>
+                    <option value="Toronto">Toronto</option>
+                    <option value="Mississauga">Mississauga</option>
+                    <option value="Vaughn">Vaughn</option>
+                    <option value="Oakville">Oakville</option>
+                    <option value="Ajax">Ajax</option>
+                </select>
+            </div>
 
-            </select>
+        </div>
 
-            {{!-- Search Button --}}
+        {{!-- Search Button --}}
+        <div class="mt-4">
             <button type="submit"
                 class="px-6 py-3 bg-blue-700 hover:bg-blue-800 rounded-lg text-white font-medium focus:ring-4 focus:outline-none focus:ring-blue-300">
                 Search
             </button>
         </div>
-    </form>
 
+    </form>
 </div>

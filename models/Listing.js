@@ -23,14 +23,23 @@ Listing.init(
     address: {
       type: DataTypes.STRING,
       allowNull: false,
+      set(value) {
+        this.setDataValue('address', value.toLowerCase());
+      }
     },
     postal_code: {
       type: DataTypes.STRING,
       allowNull: false,
+      set(value) {
+        this.setDataValue('postal_code', value.toLowerCase());
+      }
     },
     city: {
       type: DataTypes.STRING,
       allowNull: false,
+      set(value) {
+        this.setDataValue('city', value.toLowerCase());
+      }
     },
     listing_type: {
       type: DataTypes.STRING,
@@ -48,6 +57,10 @@ Listing.init(
     baths: {
       type: DataTypes.INTEGER,
       allowNull: false,
+    },
+    description: {
+      type: DataTypes.STRING(250),
+      allowNull: true,
     },
   },
   {
