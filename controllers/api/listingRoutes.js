@@ -31,7 +31,10 @@ router.get('/:id', async (req, res) => {
                 },
             ]
         });
+        const listing = listingData.get({ plain: true });
         res.status(200).json(listingData);
+        console.log('======================================',listing);
+        res.render('listing', {listing})
     } catch (err) {
         res.status(500).json(err);
     }
