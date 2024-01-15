@@ -17,17 +17,11 @@ const loginFormHandler = async (event) => {
         body: JSON.stringify({ email, password }),
         headers: { 'Content-Type': 'application/json' },
       });
-
-      if (response.ok) {
-        // If successful, redirect the browser to the profile page
-          document.location.replace('/');
-      } else {
-        const errorMessage = await response.json();
-        alert(`Failed to Log In: ${errorMessage.message}`);
-      }
-    } catch (error) {
-      console.error('Fetch error:', error);
-      alert('An error occurred. Please try again later.');
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      document.location.replace('/');
+    } else {
+      alert('Failed to Log In');
     }
   }
 };
