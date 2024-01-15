@@ -78,6 +78,7 @@ router.get('/profile', withAuth, async (req, res) => {
       res.render('profile', {
         ...user,
         logged_in: true,
+        isAgent: false,
       });
     } else if (req.session.user_type === 'agent') {
       const agentData = await Agent.findByPk(req.session.agent_id, {
@@ -89,8 +90,7 @@ router.get('/profile', withAuth, async (req, res) => {
       res.render('profile', {
         ...agent,
         logged_in: true,
-        // boolean isagent or user for 
-        // isAgent: ? : for profile.
+        isAgent: true,
       });
     } else {
       res.status(403).send("Unauthorized access");
