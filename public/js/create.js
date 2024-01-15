@@ -9,7 +9,7 @@ const signupFormHandler = async (event) => {
   //check if box is clicked
   const isAgent = isAgentCheckbox?.checked || false;
   // if isAgent, direct to agentRoutes, else userRoutes
-  try { 
+  try {
     const response = await fetch(isAgent ? '/api/agent' : '/api/users', {
       method: 'POST',
       body: JSON.stringify({ name, email, password, isAgent }),
@@ -17,7 +17,9 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
+
       document.location.replace('/profile');
+
     } else {
       console.error('Error', response.status);
       alert(`An error occurred:`);
@@ -31,3 +33,5 @@ const signupFormHandler = async (event) => {
 document
   .querySelector('.signup-form')
   .addEventListener('submit', signupFormHandler);
+
+module.exports = isAgent;
