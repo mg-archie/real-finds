@@ -1,46 +1,105 @@
-<h1>Welcome to the Real Estate Homepage</h1>
+<div class="flex min-h-screen flex-col md:flex-row">
+  {{!-- Text and Search Section --}}
+  <div class="w-full md:w-1/2 md:flex-shrink-0 p-12 bg-gray-900 text-white">
+    {{!-- Text and Search Section Content --}}
+    <div class="flex flex-col justify-center h-full">
+      <h1 class="text-6xl font-bold mb-6">
+        Buy, Sell, Connect
+      </h1>
+      <p class="text-xl mb-12">
+        Bringing Real Estate to Your Fingertips
+      </p>
 
+      {{!-- search bar --}}
 
-
-{{> searchbar}}
-
-<h2>Featured</h2>
-<p>Browse through some of the hottest listings in the GTA.</p>
-
-{{> featured_listings}}
-
-{{!-- <h2>How it Works</h2>
-
-<div class="container mx-auto py-10">
-  <h2 class="text-3xl font-semibold mb-6">How it Works</h2>
-
-  <div class="flex justify-between space-x-6">
-    <div class="flex-1">
-      <img src="./images/real-estate.png" alt="">
-      <h3 class="text-xl font-semibold mt-4">1. Sign up</h3>
-      <p class="mt-2">Sign up for our platform, it's totally free! Create your account and unlock a world of real estate
-        opportunities.</p>
-    </div>
-
-    <div class="flex-1">
-      <img src="./images/search.png" alt="">
-      <h3 class="text-xl font-semibold mt-4">2. View Listings</h3>
-      <p class="mt-2">Explore a diverse range of property listings posted by licensed and verified agents. We ensure
-        that our listings meet the highest standards to provide you with a reliable and secure browsing experience.</p>
-    </div>
-
-    <div class="flex-1">
-      <img src="./images/deal.png" alt="">
-      <h3 class="text-xl font-semibold mt-4">3. Get in Touch</h3>
-      <p class="mt-2">RealFinds simplifies the process of connecting with real estate agents. If you come across a
-        listing that captures your interest, easily get in touch with the responsible agent. Their contact information
-        is readily available, allowing you to initiate conversations and gather more details about the property.</p>
+      <div class="relative">
+        <form action="/search" method="get">
+          <label for="search-query" class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+          <div class="relative">
+            {{!-- search svg --}}
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+              </svg>
+            </div>
+            {{!-- the bar --}}
+            <input type="search" id="search-query"
+              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 placeholder-gray-400"
+              name="query" placeholder="Enter a city or address..." required>
+            {{!-- button --}}
+            <button type="submit"
+              class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2">Search</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-</div> --}}
 
+  {{!-- Image Section --}}
+  <div class="w-full md:w-1/2">
+    <img src="/images/blocks-Li4q_z15h18-unsplash.jpg" alt="Real Estate Image" class="object-cover w-full h-full">
+  </div>
+</div>
 
-<h3>A Diverse Pool of Real Estate Talent</h3>
-<p>Our platform connects local agents within the Greater Toronto Area and neighboring regions. Explore a community of regional real estate professionals promoting listings and assisting clients. Join us to enhance your regional real estate journey./p>
+<div class="container mx-auto p-10">
+  <h2 class="text-3xl font-bold mt-6 mb-3 text-center">Featured</h2>
+  <p class="text-base text-gray-500 text-center">Browse through some of the hottest listings in the GTA.</p>
+</div>
 
-{{> featured_agents}}
+<div class="container mx-auto p-10">
+  {{> featured_listings}}
+</div>
+
+<div class="container mx-auto p-10">
+  <h3 class="text-2xl font-bold mt-6 mb-3 text-center">A Diverse Pool of Real Estate Talent</h3>
+  <p class="text-base text-gray-500 text-center">Connect with local agents in the Greater Toronto Area and neighboring
+    regions.
+    Explore a community of regional real estate professionals. Join us to enhance your regional real estate journey.</p>
+</div>
+
+<div class="container mx-auto p-10">
+  {{> featured_agents}}
+</div>
+
+<div class="container mx-auto p-10">
+  <div class="flex flex-wrap md:flex-nowrap">
+    {{!-- Text Section --}}
+    <div class="w-full md:w-1/2 p-6 flex items-center md:flex-col md:items-start">
+      <div class="space-y-10 content-center text-center md:text-left">
+        {{!-- Section 1 --}}
+        <div>
+          <span
+            class="inline-flex items-center rounded-md bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">01</span>
+
+          <h2 class="text-3xl font-bold pt-6 text-slate-800">Sign Up Easily</h2>
+          <p class="my-2 text-gray-500">Create an account and start exploring real estate opportunities at no cost.</p>
+        </div>
+        {{!-- Section 2 --}}
+        <div>
+          <span
+            class="inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">02</span>
+          <h2 class="text-3xl font-bold pt-6 text-slate-800">Discover Listings</h2>
+          <p class="my-2 text-gray-500">Find verified properties with our trusted and secure platform.</p>
+        </div>
+        {{!-- Section 3 --}}
+        <div>
+          <span
+            class="inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">03</span>
+
+          <h2 class="text-3xl font-bold pt-6 text-slate-800">Connect with Agents</h2>
+          <p class="my-2 text-gray-500">Reach out directly to agents for properties that interest you.</p>
+        </div>
+        <a href="/search"
+          class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Start
+          Searching</a>
+      </div>
+    </div>
+    {{!-- Image Section --}}
+    <div class="w-full md:w-1/2 p-6">
+      <img src="/images/christin-hume-Hcfwew744z4-unsplash.jpg" alt="Real Estate"
+        class="rounded-lg shadow-lg aspect-square">
+    </div>
+  </div>
+</div>
