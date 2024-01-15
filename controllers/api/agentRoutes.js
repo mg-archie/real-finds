@@ -67,7 +67,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.agent_id = agentData.id;
       req.session.logged_in = true;
-      
+      req.session.user_type = 'agent';
       res.json({ agent: agentData, message: 'You are now logged in!' });
     });
 

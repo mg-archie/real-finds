@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Agent, Listing, } = require('../models');
+const withAuth = require('../utils/auth');
 
 // home route
 router.get('/', async (req, res) => {
@@ -63,23 +64,42 @@ router.get('/agent/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 // userts will be routed to profiles where it shows their infor and can edit their info
 // agents on the otherhand shoudl be shown to thier profile and display the same edit stuff but shoudl be able to see thier ective listings 
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
+  console.log(req.session)
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-    });
+    if (req.session.user_type === 'user') {
+      // Find the logged-in user based on the session ID
+      const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+      });
 
-    const user = userData.get({ plain: true });
+      const user = userData.get({ plain: true });
 
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
+      res.render('profile', {
+        ...user,
+        logged_in: true,
+      });
+    } else if (req.session.user_type === 'agent') {
+      const agentData = await Agent.findByPk(req.session.agent_id, {
+        attributes: { exclude: ['password'] },
+      });
+
+      const agent = agentData.get({ plain: true });
+
+      res.render('profile', {
+        ...agent,
+        logged_in: true,
+        // boolean isagent or user for 
+        // isAgent: ? : for profile.
+      });
+    } else {
+      res.status(403).send("Unauthorized access");
+    }
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
