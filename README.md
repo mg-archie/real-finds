@@ -75,9 +75,9 @@ Listing Page
 
 GitHub Repository:
 
-PLACEHOLDER
+(https://github.com/mg-archie/real-finds)
 
 
 Deployed Web Application:
 
-PLACEHOLDER
+(https://real-finds-4bd92a80b9d5.herokuapp.com/)https://real-finds-4bd92a80b9d5.herokuapp.com/
