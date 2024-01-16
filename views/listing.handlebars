@@ -2,12 +2,14 @@
      <a href="/listing/{{this.id}}">
   <div class="flex justify-center bg-white p-4 rounded-lg shadow-md">Image Placeholder</div>
     <h4 class="text-2xl font-bold text-gray-800 dark:text-black mb-2">Listing Price:</h4>
-    <h5 class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">${{this.price}} </h5>
-    <h6 class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">Address: {{this.address}}, {{this.postal_code}}, {{city}}</h6>
-    <h7 class="text-2xl font-bold text-gray-800 dark:text-black mb-2">Property Type: {{this.listing_type}}</h7>
+    <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">${{this.price}} </p>
+    <h5 class="text-2xl font-bold text-gray-800 dark:text-black mb-2">Address:</h5>
+      <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">{{this.address}}, {{this.postal_code}}, {{city}}</p>
+    <h6 class="text-2xl font-bold text-gray-800 dark:text-black mb-2">Property Type: {{this.listing_type}}</h6>
     <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">Sqft: {{this.sqft}}</p>
     <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2"># of Rooms: {{this.rooms}}, # of Baths: {{baths}}</p>
-    <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">Description: {{this.description}}</p>
+    <h7 class="text-2xl font-bold text-gray-800 dark:text-black mb-2">Description:</h7>
+    <p class="text-2xl font-bold text-gray-800 dark:text-darkgray mb-2">{{this.description}}</p>
     </div>
     </a>
 </div>
