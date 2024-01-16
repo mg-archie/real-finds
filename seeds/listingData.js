@@ -10,19 +10,8 @@ const listingData = [
     "sqft": 1600,
     "rooms": 3,
     "baths": 2,
-    "description": "Contemporary 3-bedroom condo in Toronto with 2 bathrooms and 1600 sqft of modern living space."
-  },
-  {
-    "price": 680000,
-    "date_created": "2023-11-05",
-    "address": "234 Birchwood Ave",
-    "postal_code": "M5S 3K9",
-    "city": "Toronto",
-    "listing_type": "House",
-    "sqft": 2100,
-    "rooms": 4,
-    "baths": 3,
-    "description": "Beautiful 4-bedroom house in Toronto with 3 bathrooms and 2100 sqft of character."
+    "description": "Contemporary 3-bedroom condo in Toronto with 2 bathrooms and 1600 sqft of modern living space.",
+    filename: 'condo_image_01.jpg',
   },
   {
     "price": 750000,
@@ -34,7 +23,8 @@ const listingData = [
     "sqft": 2500,
     "rooms": 4,
     "baths": 3,
-    "description": "Spacious 4-bedroom house in Vaughan with 3 bathrooms and 2500 sqft of living space."
+    "description": "Spacious 4-bedroom house in Vaughan with 3 bathrooms and 2500 sqft of living space.",
+    filename: 'house_image_17.jpg',
   },
   {
     "price": 610000,
@@ -46,7 +36,8 @@ const listingData = [
     "sqft": 1800,
     "rooms": 3,
     "baths": 2,
-    "description": "Elegant 3-bedroom condo in Oakville with 2 bathrooms and 1800 sqft of luxury."
+    "description": "Elegant 3-bedroom condo in Oakville with 2 bathrooms and 1800 sqft of luxury.",
+    filename: 'condo_image_02.jpg',
   },
   {
     "price": 920000,
@@ -58,7 +49,8 @@ const listingData = [
     "sqft": 3200,
     "rooms": 5,
     "baths": 4,
-    "description": "Luxurious 5-bedroom house in Ajax with 4 bathrooms and 3200 sqft of elegance."
+    "description": "Luxurious 5-bedroom house in Ajax with 4 bathrooms and 3200 sqft of elegance.",
+    filename: 'house_image_16.jpg',
   },
   {
     "price": 550000,
@@ -70,7 +62,8 @@ const listingData = [
     "sqft": 2000,
     "rooms": 4,
     "baths": 2,
-    "description": "Charming 4-bedroom house in Toronto with 2 bathrooms and 2000 sqft of character."
+    "description": "Charming 4-bedroom house in Toronto with 2 bathrooms and 2000 sqft of character.",
+    filename: 'house_image_15.jpg',
   },
   {
     "price": 710000,
@@ -82,7 +75,8 @@ const listingData = [
     "sqft": 1700,
     "rooms": 3,
     "baths": 2,
-    "description": "Modern 3-bedroom condo in Toronto with 2 bathrooms and 1700 sqft of contemporary living."
+    "description": "Modern 3-bedroom condo in Toronto with 2 bathrooms and 1700 sqft of contemporary living.",
+    filename: 'condo_image_03.jpg',
   },
   {
     "price": 830000,
@@ -94,7 +88,8 @@ const listingData = [
     "sqft": 2800,
     "rooms": 5,
     "baths": 3,
-    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2800 sqft of living space."
+    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2800 sqft of living space.",
+    filename: 'house_image_14.jpg',
   },
   {
     "price": 620000,
@@ -106,7 +101,8 @@ const listingData = [
     "sqft": 1900,
     "rooms": 3,
     "baths": 2,
-    "description": "Cozy 3-bedroom condo in Oakville with 2 bathrooms and 1900 sqft of living space."
+    "description": "Cozy 3-bedroom condo in Oakville with 2 bathrooms and 1900 sqft of living space.",
+    filename: 'condo_image_04.jpg',
   },
   {
     "price": 950000,
@@ -118,7 +114,8 @@ const listingData = [
     "sqft": 3100,
     "rooms": 6,
     "baths": 4,
-    "description": "Stunning 6-bedroom house in Ajax with 4 bathrooms and 3100 sqft of luxurious living space."
+    "description": "Stunning 6-bedroom house in Ajax with 4 bathrooms and 3100 sqft of luxurious living space.",
+    filename: 'house_image_13.jpg',
   },
   {
     "price": 590000,
@@ -130,7 +127,8 @@ const listingData = [
     "sqft": 2300,
     "rooms": 4,
     "baths": 2,
-    "description": "Classic 4-bedroom house in Toronto with 2 bathrooms and 2300 sqft of charm."
+    "description": "Classic 4-bedroom house in Toronto with 2 bathrooms and 2300 sqft of charm.",
+    filename: 'house_image_11.jpg',
   },
   {
     "price": 720000,
@@ -142,7 +140,8 @@ const listingData = [
     "sqft": 1600,
     "rooms": 3,
     "baths": 2,
-    "description": "Elegant 3-bedroom condo in Toronto with 2 bathrooms and 1600 sqft of luxury."
+    "description": "Elegant 3-bedroom condo in Toronto with 2 bathrooms and 1600 sqft of luxury.",
+    filename: 'condo_image_05.jpg',
   },
   {
     "price": 760000,
@@ -154,7 +153,8 @@ const listingData = [
     "sqft": 2400,
     "rooms": 4,
     "baths": 3,
-    "description": "Beautiful 4-bedroom house in Vaughan with 3 bathrooms and 2400 sqft of character."
+    "description": "Beautiful 4-bedroom house in Vaughan with 3 bathrooms and 2400 sqft of character.",
+    filename: 'house_image_12.jpg',
   },
   {
     "price": 610000,
@@ -166,7 +166,8 @@ const listingData = [
     "sqft": 2400,
     "rooms": 4,
     "baths": 2,
-    "description": "Classic 4-bedroom house in Toronto with 2 bathrooms and 2400 sqft of charm."
+    "description": "Classic 4-bedroom house in Toronto with 2 bathrooms and 2400 sqft of charm.",
+    filename: 'house_image_10.jpg',
   },
   {
     "price": 780000,
@@ -178,7 +179,8 @@ const listingData = [
     "sqft": 1700,
     "rooms": 3,
     "baths": 2,
-    "description": "Elegant 3-bedroom condo in Toronto with 2 bathrooms and 1700 sqft of luxury."
+    "description": "Elegant 3-bedroom condo in Toronto with 2 bathrooms and 1700 sqft of luxury.",
+    filename: 'condo_image_06.jpg',
   },
   {
     "price": 730000,
@@ -190,7 +192,8 @@ const listingData = [
     "sqft": 2600,
     "rooms": 5,
     "baths": 3,
-    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2600 sqft of living space."
+    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2600 sqft of living space.",
+    filename: 'house_image_09.jpg',
   },
   {
     "price": 620000,
@@ -202,7 +205,8 @@ const listingData = [
     "sqft": 1900,
     "rooms": 3,
     "baths": 2,
-    "description": "Modern 3-bedroom condo in Oakville with 2 bathrooms and 1900 sqft of contemporary living."
+    "description": "Modern 3-bedroom condo in Oakville with 2 bathrooms and 1900 sqft of contemporary living.",
+    filename: 'condo_image_07.jpg',
   },
   {
     "price": 970000,
@@ -214,7 +218,8 @@ const listingData = [
     "sqft": 3300,
     "rooms": 6,
     "baths": 4,
-    "description": "Luxurious 6-bedroom house in Ajax with 4 bathrooms and 3300 sqft of elegance."
+    "description": "Luxurious 6-bedroom house in Ajax with 4 bathrooms and 3300 sqft of elegance.",
+    filename: 'house_image_08.jpg',
   },
   {
     "price": 525000,
@@ -226,7 +231,8 @@ const listingData = [
     "sqft": 2200,
     "rooms": 4,
     "baths": 2,
-    "description": "Charming 4-bedroom house in Toronto. 2 bathrooms, 2200 sqft of living space."
+    "description": "Charming 4-bedroom house in Toronto. 2 bathrooms, 2200 sqft of living space.",
+    filename: 'house_image_07.jpg',
   },
   {
     "price": 720000,
@@ -238,7 +244,8 @@ const listingData = [
     "sqft": 1500,
     "rooms": 3,
     "baths": 2,
-    "description": "Modern 3-bedroom condo in Mississauga with 2 bathrooms and 1500 sqft of space."
+    "description": "Modern 3-bedroom condo in Mississauga with 2 bathrooms and 1500 sqft of space.",
+    filename: 'condo_image_08.jpg',
   },
   {
     "price": 820000,
@@ -250,7 +257,8 @@ const listingData = [
     "sqft": 2800,
     "rooms": 5,
     "baths": 3,
-    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2800 sqft of living area."
+    "description": "Spacious 5-bedroom house in Vaughan with 3 bathrooms and 2800 sqft of living area.",
+    filename: 'house_image_06.jpg',
   },
   {
     "price": 650000,
@@ -262,7 +270,8 @@ const listingData = [
     "sqft": 1800,
     "rooms": 3,
     "baths": 2,
-    "description": "Cozy 3-bedroom condo in Oakville. 2 bathrooms, 1800 sqft of living space."
+    "description": "Cozy 3-bedroom condo in Oakville. 2 bathrooms, 1800 sqft of living space.",
+    filename: 'condo_image_09.jpg',
   },
   {
     "price": 920000,
@@ -274,7 +283,8 @@ const listingData = [
     "sqft": 3200,
     "rooms": 6,
     "baths": 4,
-    "description": "Stunning 6-bedroom house in Ajax with 4 bathrooms and 3200 sqft of luxurious living space."
+    "description": "Stunning 6-bedroom house in Ajax with 4 bathrooms and 3200 sqft of luxurious living space.",
+    filename: 'house_image_05.jpg',
   },
   {
     "price": 1050000,
@@ -286,7 +296,8 @@ const listingData = [
     "sqft": 3500,
     "rooms": 6,
     "baths": 4,
-    "description": "Luxurious 6-bedroom house in Toronto with 4 bathrooms and 3500 sqft of elegance."
+    "description": "Luxurious 6-bedroom house in Toronto with 4 bathrooms and 3500 sqft of elegance.",
+    filename: 'house_image_04.jpg',
   },
   {
     "price": 1125000,
@@ -298,7 +309,8 @@ const listingData = [
     "sqft": 2200,
     "rooms": 4,
     "baths": 3,
-    "description": "Elegant 4-bedroom condo in Toronto with 3 bathrooms and 2200 sqft of luxury."
+    "description": "Elegant 4-bedroom condo in Toronto with 3 bathrooms and 2200 sqft of luxury.",
+    filename: 'condo_image_10.jpg',
   },
   {
     "price": 1180000,
@@ -310,19 +322,8 @@ const listingData = [
     "sqft": 4000,
     "rooms": 7,
     "baths": 5,
-    "description": "Spacious 7-bedroom house in Vaughan with 5 bathrooms and 4000 sqft of living space."
-  },
-  {
-    "price": 1250000,
-    "date_created": "2023-09-20",
-    "address": "456 Willow Rd",
-    "postal_code": "L6J 1P9",
-    "city": "Oakville",
-    "listing_type": "Condo",
-    "sqft": 2600,
-    "rooms": 5,
-    "baths": 4,
-    "description": "Modern 5-bedroom condo in Oakville with 4 bathrooms and 2600 sqft of contemporary living."
+    "description": "Spacious 7-bedroom house in Vaughan with 5 bathrooms and 4000 sqft of living space.",
+    filename: 'house_image_03.jpg',
   },
   {
     "price": 1350000,
@@ -334,7 +335,8 @@ const listingData = [
     "sqft": 4500,
     "rooms": 8,
     "baths": 6,
-    "description": "Stunning 8-bedroom house in Ajax with 6 bathrooms and 4500 sqft of luxurious living space."
+    "description": "Stunning 8-bedroom house in Ajax with 6 bathrooms and 4500 sqft of luxurious living space.",
+    filename: 'house_image_18.jpg',
   },
   {
     "price": 1500000,
@@ -346,7 +348,8 @@ const listingData = [
     "sqft": 3800,
     "rooms": 6,
     "baths": 5,
-    "description": "Elegant 6-bedroom house in Toronto with 5 bathrooms and 3800 sqft of luxury."
+    "description": "Elegant 6-bedroom house in Toronto with 5 bathrooms and 3800 sqft of luxury.",
+    filename: 'house_image_01.jpg',
   },
 ]
 const seedListing = () => Listing.bulkCreate(listingData);

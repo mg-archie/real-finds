@@ -62,6 +62,10 @@ Listing.init(
       type: DataTypes.STRING(250),
       allowNull: true,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
