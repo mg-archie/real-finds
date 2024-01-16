@@ -1,83 +1,34 @@
-#RealFinds
+# Real Finds
 
-Full-Stack Web Application
+## Description
 
+ We were motivated to create a place for buyers, sellers and agents to connect and view real estate.  We built this after identifying a compartmentalization of the real estate industry where buyers, sellers and agents are often all using different platforms and getting different information making the industry very fragmented.  This app aims to solve that issue. We learnt the importance of proper routing, database structure and frontend utility. 
 
-Description:
+## Installation
 
-Community-focused application in the Real Estate Industry.
+Just visit!   https://real-finds-4bd92a80b9d5.herokuapp.com/
 
-Real Estate professionals can promote themselves and their listings.
+## Usage
 
-Buyer/Sellers can look for properties and Agents.
+  Upon visit users can see real estate listings and agents they can get in contact with.  Users and agents can create accounts and search for listing based on criteria.  
 
-
-Technologies Used:
-
-Node.js
-Express.js
-Handlebars.js
-Bcrypt
-Tailwind CSS
-Sequelize
-Dotenv
-MySQL
-JavaScript
-Github
-Visual Studio Code
-Heroku
-
-
-Installation
-
-To install the project:
-
-npm i
-
-mysql source schema.sql
-
-npm run seed
-
-npm start
-
-
-User Story:
-
-As a Buyer/Seller, I want to search for properties by region with the option to communicate with Real Estate Professionals in an integrated platform and to see community-driven reviews on closed transactions
-
-As a Real Estate Professional, I want to be able to solidify my brand/brokerage by client reviews and to promote my listings with the option to communicate with potential clients within the same platform
-
-
-Screenshots:
-
-Homepage
 ![realfindsscreenshot1](https://github.com/mg-archie/real-finds/assets/149994852/dde75a4b-5ca5-4f66-8f79-edd0dde79f92)
-![realfindsscreenshot2](https://github.com/mg-archie/real-finds/assets/149994852/bdf8b6f2-fbf4-4b08-afdc-0b1717a03f68)
 
+## Credits
 
-Create Account/Login
-![realfindsscreenshot3](https://github.com/mg-archie/real-finds/assets/149994852/1b2768c4-5f9d-4a98-a5d0-c459eaf9b706)
+- Faust Celaj  https://github.com/FaustCelaj
 
+- Myles George-Archibald  https://github.com/mg-archie
 
-Profile Page
-![realfindsscreenshot4](https://github.com/mg-archie/real-finds/assets/149994852/9987cb7c-bf3e-4ad2-a256-be8bbd8a5ed0)
+- Peter Tong  https://github.com/arkenwald
 
+- Github reposity  (https://github.com/mg-archie/real-finds)
 
-Search Page
-![realfindsscreenshot5](https://github.com/mg-archie/real-finds/assets/149994852/416782ad-e538-4e92-b18f-03918cd231c2)
+## License
 
+https://opensource.org/license/apache-2-0/
 
-Listing Page
-![realfindsscreenshot6](https://github.com/mg-archie/real-finds/assets/149994852/cf44cbbe-ca82-4fc3-990d-5772953b1aa4)
+## Badges
 
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-
-
-GitHub Repository:
-
-(https://github.com/mg-archie/real-finds)
-
-
-Deployed Web Application:
-
-(https://real-finds-4bd92a80b9d5.herokuapp.com/)https://real-finds-4bd92a80b9d5.herokuapp.com/
