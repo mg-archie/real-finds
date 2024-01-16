@@ -14,16 +14,17 @@
 
     <nav class="border-gray-200 bg-slate-100">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
           <span class="self-center text-2xl font-semibold whitespace-nowrap">RealFinds</span>
         </a>
         <button data-collapse-toggle="navbar-solid-bg" type="button"
-          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-solid-bg" aria-expanded="true">
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          aria-controls="navbar-solid-bg" aria-expanded="true">
           <span class="sr-only">Open main menu</span>
           <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15" /> 
+              d="M1 1h15M1 7h15M1 13h15" />
           </svg>
         </button>
         <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
@@ -36,10 +37,10 @@
             <li>
               <a href="/search"
                 class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700">Search</a>
-            </li> 
+            </li>
             {{#if logged_in}}
             <li>
-             
+
               <a href="/profile"
                 class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700">Profile</a>
             </li>
@@ -60,47 +61,44 @@
     </nav>
   </header>
 
-  <main class="container container-fluid min-w-full mt-5">
+  <main class="container container-fluid min-w-full mt-2">
     {{{ body }}}
   </main>
 
   <footer>
-
-
-<footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
-    <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+    <footer class="bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+      <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <div class="sm:flex sm:items-center sm:justify-between">
-            <a href="https://flowbite.com/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RealFinds</span>
-            </a>
-            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Home</a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline me-4 md:me-6">Search</a>
-                </li>
-                {{#if logged_in}}
-                <li>
-                    <a href="/profile" class="hover:underline me-4 md:me-6">Profile</a>
-                </li>
-                {{/if}}
-                <li>
-                  {{#if logged_in}}
-                    <a href="/profile" id="logout" class="hover:underline">Logout</a>
-                    {{else}}
-                    <a href="/login" id="login" class="hover:underline">Login</a>
-                </li>
-                {{/if}}
-            </ul>
+          <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">RealFinds</span>
+          </a>
+          <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+              <a href="/" class="hover:underline me-4 md:me-6">Home</a>
+            </li>
+            <li>
+              <a href="/search" class="hover:underline me-4 md:me-6">Search</a>
+            </li>
+            {{#if logged_in}}
+            <li>
+              <a href="/profile" class="hover:underline me-4 md:me-6">Profile</a>
+            </li>
+            {{/if}}
+            <li>
+              {{#if logged_in}}
+              <a href="/profile" id="logout" class="hover:underline">Logout</a>
+              {{else}}
+              <a href="/login" id="login" class="hover:underline">Login</a>
+            </li>
+            {{/if}}
+          </ul>
         </div>
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">RealFinds</a>. All Rights Reserved.</span>
-    </div>
-</footer>
-
-
+        <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="/"
+            class="hover:underline">RealFinds</a>. All Rights Reserved.</span>
+      </div>
+    </footer>
   </footer>
 
   <!-- Only include the logout script if the user is logged in -->

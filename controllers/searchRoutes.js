@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Listing } = require('../models');
 const { Op } = require('sequelize');
 
+// search function logic
 router.get('/', async (req, res) => {
   try {
     const { query, baths, rooms, type, city } = req.query;
@@ -42,19 +43,34 @@ router.get('/', async (req, res) => {
     let searchResults = await Listing.findAll({
       where: searchConditions
     });
+    const cleanSearchResults = searchResults.map((listing) => listing.get({ plain: true }));
 
-    res.render('search', {
-      searchResults,
-      queryParams: {
-        query,
-        baths,
-        rooms,
-        type,
-        city
-      }
-    });
+    console.log('======================================',cleanSearchResults);
+
+    res.render('search', { cleanSearchResults });
   } catch (err) {
     console.error(err);
+    res.status(500).json(err);
+  }
+});
+
+// loads listing page on a clicked listing
+router.get('/listing/:id', async (req, res) => {
+  try {
+    const listingData = await Listing.findByPk(req.params.id, {
+      include: [
+        {
+          model: Agent,
+          attributes: ['name', 'brokerage'],
+        },
+      ]
+    });
+
+    const listing = listingData.get({ plain: true });
+    console.log('======================================',listing);
+    res.render('listing', listing);
+  } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
