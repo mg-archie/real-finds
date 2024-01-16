@@ -7,7 +7,7 @@ router.get('/', async (req, res) => {
   try {
     // Fetch latest 3 listings and agents data from the database
     const listingData = await Listing.findAll({
-      limit: 7, // Limit to 3 listings
+      limit: 4, // Limit to 3 listings
       order: [['date_created', 'DESC']], // Sort by date_created in descending order
     });
     const agentData = await Agent.findAll();
