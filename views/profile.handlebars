@@ -1,10 +1,82 @@
-
-<h2>Profile Page</h2>
-
 {{#if isAgent}}
-  <p>This is an agent profile.</p>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+    <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white">
+      Welcome {{this.name}} 
+    </caption>
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          Username
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Email
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Password
+        </th>
+        <th scope="col" class="px-6 py-3">
+          <span class="sr-only">Edit</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white border-b">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+          {{this.name}}
+        </th>
+        <td class="px-6 py-4">
+          {{this.email}}
+        </td>
+        <td class="px-6 py-4">
+          **********
+        </td>
+        <td class="px-6 py-4 text-right">
+          <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 {{else}}
-  <p>This is a user profile.</p>
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+    <caption class="p-5 text-lg font-semibold text-left rtl:text-right text-gray-900 bg-white">
+      Welcome {{this.name}} 
+    </caption>
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+      <tr>
+        <th scope="col" class="px-6 py-3">
+          Username
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Email
+        </th>
+        <th scope="col" class="px-6 py-3">
+          Password
+        </th>
+        <th scope="col" class="px-6 py-3">
+          <span class="sr-only">Edit</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="bg-white border-b">
+        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+          {{this.name}}
+        </th>
+        <td class="px-6 py-4">
+          {{this.email}}
+        </td>
+        <td class="px-6 py-4">
+          **********
+        </td>
+        <td class="px-6 py-4 text-right">
+          <a href="#" class="font-medium text-blue-600 hover:underline">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 {{/if}}
-
-
