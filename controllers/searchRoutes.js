@@ -17,22 +17,26 @@ router.get('/', async (req, res) => {
     }
 
     // Handle "1+", "2+", "3+", "4+", and "5+" options for bedrooms
+    // Handle strict selection as well
     if (rooms && rooms !== '') {
-      if (rooms === "5+") {
-        searchConditions.rooms = { [Op.gte]: 5 };
-      } else {
+      if (rooms.endsWith("+")) {
         const roomCount = parseInt(rooms, 10);
         searchConditions.rooms = { [Op.gte]: roomCount };
+      } else {
+        const roomCount = parseInt(rooms, 10);
+        searchConditions.rooms = roomCount;
       }
     }
 
     // Handle "1+", "2+", "3+", "4+", and "5+" options for bathrooms
+    // Handle strict selection as well
     if (baths && baths !== '') {
-      if (baths === "5+") {
-        searchConditions.baths = { [Op.gte]: 5 };
-      } else {
+      if (baths.endsWith("+")) {
         const bathCount = parseInt(baths, 10);
         searchConditions.baths = { [Op.gte]: bathCount };
+      } else {
+        const bathCount = parseInt(baths, 10);
+        searchConditions.baths = bathCount;
       }
     }
 
@@ -45,9 +49,18 @@ router.get('/', async (req, res) => {
     });
     const cleanSearchResults = searchResults.map((listing) => listing.get({ plain: true }));
 
-    console.log('======================================',cleanSearchResults);
+    console.log('======================================', cleanSearchResults);
 
-    res.render('search', { cleanSearchResults });
+    res.render('search', {
+      cleanSearchResults,
+      queryParams: {
+        query,
+        baths,
+        rooms,
+        type,
+        city
+      }
+    });
   } catch (err) {
     console.error(err);
     res.status(500).json(err);
@@ -67,7 +80,7 @@ router.get('/listing/:id', async (req, res) => {
     });
 
     const listing = listingData.get({ plain: true });
-    console.log('======================================',listing);
+    console.log('======================================', listing);
     res.render('listing', listing);
   } catch (err) {
     console.log(err);
